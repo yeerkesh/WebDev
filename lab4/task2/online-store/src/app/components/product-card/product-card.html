@@ -1,0 +1,23 @@
+<div class="product-card">
+  <div class="image-container">
+    <img [src]="product.images[selectedImageIndex]" class="main-img">
+    <div class="thumbnails">
+      @for (img of product.images; track img; let i = $index) {
+        <img [src]="img" (click)="selectImage(i)" [class.active]="i === selectedImageIndex">
+      }
+    </div>
+  </div>
+
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <div class="rating">Рейтинг: {{ product.rating }} ⭐</div>
+  <div class="price">{{ product.price }} ₸</div>
+
+  <div class="actions">
+    <a [href]="product.link" target="_blank" class="buy-link">Открыть на Kaspi</a>
+    <div class="share-btns">
+      <button (click)="shareToWhatsApp()">WhatsApp</button>
+      <button (click)="shareToTelegram()">Telegram</button>
+    </div>
+  </div>
+</div>
