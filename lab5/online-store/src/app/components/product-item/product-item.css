@@ -1,0 +1,113 @@
+.card {
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.thumb {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.name {
+  min-height: 64px;     /* под 2 строки */
+  line-height: 1.2;
+}
+
+.desc {
+  min-height: 72px;     /* под 3-4 строки */
+  line-height: 1.4;
+}
+
+.rating {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  border: 1px solid #ccc;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.desc {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.actions {
+  display: grid;
+  margin-top: auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #e3e3e3;
+}
+
+.danger {
+  background: #ffdddd !important;
+}
+.img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #ffffff;     
+  border-radius: 10px;
+}
+
+.thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.thumb {
+  width: 60px;
+  height: 45px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f2f2f2;
+}

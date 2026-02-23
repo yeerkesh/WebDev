@@ -1,0 +1,25 @@
+<div class="layout">
+  <aside class="categories">
+    <h2>Categories</h2>
+
+    <button
+      class="cat-btn"
+      *ngFor="let c of categories"
+      (click)="selectCategory(c.id)"
+      [class.active]="c.id === selectedCategoryId"
+    >
+      {{ c.name }}
+    </button>
+  </aside>
+
+  <main class="content">
+    <div *ngIf="selectedCategoryId === null" class="welcome">
+      Select a category to see products.
+    </div>
+
+    <app-product-list
+      *ngIf="selectedCategoryId !== null"
+      [products]="filteredProducts"
+    ></app-product-list>
+  </main>
+</div>
